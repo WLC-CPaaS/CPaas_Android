@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class VoIPUserApi {
-  String basePath = "http://API_HOSTNAME";
+  String basePath = "http://api.beta.cpaaslabs.net";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -760,7 +760,7 @@ public class VoIPUserApi {
   }
   /**
   * Impersonate a User
-  * Impersonate as another user if you have access to admin.
+  * Retrieve a token for making presence calls.
    * @param accountid Account ID, 32 alpha numeric
    * @param userid User ID, 32 alpha numeric
    * @param user Payload for impersonate a user
@@ -835,7 +835,7 @@ public class VoIPUserApi {
 
       /**
    * Impersonate a User
-   * Impersonate as another user if you have access to admin.
+   * Retrieve a token for making presence calls.
    * @param accountid Account ID, 32 alpha numeric   * @param userid User ID, 32 alpha numeric   * @param user Payload for impersonate a user
   */
   public void v1AccountAccountidUserUseridUserauthPost (String accountid, String userid, ServiceVOIPImpersonateUser user, final Response.Listener<ServiceDocsImpersonateUserGetSingle> responseListener, final Response.ErrorListener errorListener) {

@@ -1,6 +1,6 @@
 # E911Api
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## v1E911Get
 
-> ServiceDocE911URIsApiOutput v1E911Get()
+> ServiceDocsE911URIsApiOutput v1E911Get()
 
 Get E911 List
 
@@ -31,7 +31,7 @@ Obtain e911 URIs associated with the provided account ID.
 
 E911Api apiInstance = new E911Api();
 try {
-    ServiceDocE911URIsApiOutput result = apiInstance.v1E911Get();
+    ServiceDocsE911URIsApiOutput result = apiInstance.v1E911Get();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911Get");
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ServiceDocE911URIsApiOutput**](ServiceDocE911URIsApiOutput.md)
+[**ServiceDocsE911URIsApiOutput**](ServiceDocsE911URIsApiOutput.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 ## v1E911LocationLocationIDActivatePut
 
-> ServiceDocE911ActiveLocationOutput v1E911LocationLocationIDActivatePut(locationID)
+> ServiceDocsE911ActiveLocationOutput v1E911LocationLocationIDActivatePut(locationID)
 
 Activate E911 Location
 
@@ -74,7 +74,7 @@ Edit the provision location.
 E911Api apiInstance = new E911Api();
 String locationID = null; // String | Location ID
 try {
-    ServiceDocE911ActiveLocationOutput result = apiInstance.v1E911LocationLocationIDActivatePut(locationID);
+    ServiceDocsE911ActiveLocationOutput result = apiInstance.v1E911LocationLocationIDActivatePut(locationID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911LocationLocationIDActivatePut");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationOutput**](ServiceDocE911ActiveLocationOutput.md)
+[**ServiceDocsE911ActiveLocationOutput**](ServiceDocsE911ActiveLocationOutput.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ No authorization required
 
 ## v1E911LocationLocationIDDelete
 
-> ServiceDocE911RemoveLocationOutput v1E911LocationLocationIDDelete(locationID)
+> ServiceDocsE911RemoveLocationOutput v1E911LocationLocationIDDelete(locationID)
 
 Delete E911 Location
 
@@ -120,7 +120,7 @@ Remove the location.
 E911Api apiInstance = new E911Api();
 String locationID = null; // String | Location ID
 try {
-    ServiceDocE911RemoveLocationOutput result = apiInstance.v1E911LocationLocationIDDelete(locationID);
+    ServiceDocsE911RemoveLocationOutput result = apiInstance.v1E911LocationLocationIDDelete(locationID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911LocationLocationIDDelete");
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911RemoveLocationOutput**](ServiceDocE911RemoveLocationOutput.md)
+[**ServiceDocsE911RemoveLocationOutput**](ServiceDocsE911RemoveLocationOutput.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ No authorization required
 
 ## v1E911LocationValidatePut
 
-> ServiceDocE911ValidateLocationOutput v1E911LocationValidatePut(reqBody)
+> ServiceDocsE911ValidateLocationOutput v1E911LocationValidatePut(reqBody)
 
 Validate a Location
 
@@ -166,7 +166,7 @@ Validate the location details.
 E911Api apiInstance = new E911Api();
 ServiceE911ValidateLocationInput reqBody = new ServiceE911ValidateLocationInput(); // ServiceE911ValidateLocationInput | location details
 try {
-    ServiceDocE911ValidateLocationOutput result = apiInstance.v1E911LocationValidatePut(reqBody);
+    ServiceDocsE911ValidateLocationOutput result = apiInstance.v1E911LocationValidatePut(reqBody);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911LocationValidatePut");
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ValidateLocationOutput**](ServiceDocE911ValidateLocationOutput.md)
+[**ServiceDocsE911ValidateLocationOutput**](ServiceDocsE911ValidateLocationOutput.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 
 ## v1E911PhoneNumberDelete
 
-> ServiceDocE911RemoveURIApiOutput v1E911PhoneNumberDelete(phoneNumber)
+> ServiceDocsE911RemoveURIApiOutput v1E911PhoneNumberDelete(phoneNumber)
 
 Delete E911 Phone Number
 
@@ -212,7 +212,7 @@ Delete the e911 URI connected with the account URI.
 E911Api apiInstance = new E911Api();
 String phoneNumber = null; // String | Phone Number
 try {
-    ServiceDocE911RemoveURIApiOutput result = apiInstance.v1E911PhoneNumberDelete(phoneNumber);
+    ServiceDocsE911RemoveURIApiOutput result = apiInstance.v1E911PhoneNumberDelete(phoneNumber);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911PhoneNumberDelete");
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911RemoveURIApiOutput**](ServiceDocE911RemoveURIApiOutput.md)
+[**ServiceDocsE911RemoveURIApiOutput**](ServiceDocsE911RemoveURIApiOutput.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 
 ## v1E911PhoneNumberLocationActiveGet
 
-> ServiceDocE911ActiveLocationURIApiOutput v1E911PhoneNumberLocationActiveGet(phoneNumber)
+> ServiceDocsE911ActiveLocationURIApiOutput v1E911PhoneNumberLocationActiveGet(phoneNumber)
 
 Get Actvie Location for a Phone Number
 
@@ -258,7 +258,7 @@ Get the e911 location connected with the URI.
 E911Api apiInstance = new E911Api();
 String phoneNumber = null; // String | Phone Number
 try {
-    ServiceDocE911ActiveLocationURIApiOutput result = apiInstance.v1E911PhoneNumberLocationActiveGet(phoneNumber);
+    ServiceDocsE911ActiveLocationURIApiOutput result = apiInstance.v1E911PhoneNumberLocationActiveGet(phoneNumber);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911PhoneNumberLocationActiveGet");
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationURIApiOutput**](ServiceDocE911ActiveLocationURIApiOutput.md)
+[**ServiceDocsE911ActiveLocationURIApiOutput**](ServiceDocsE911ActiveLocationURIApiOutput.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ No authorization required
 
 ## v1E911PhoneNumberLocationGet
 
-> ServiceDocE911LocationsURIApiOutput v1E911PhoneNumberLocationGet(phoneNumber)
+> ServiceDocsE911LocationsURIApiOutput v1E911PhoneNumberLocationGet(phoneNumber)
 
 Get Location List for Phone Number
 
@@ -304,7 +304,7 @@ Access a list of the e911 locations associated with the provided URI.
 E911Api apiInstance = new E911Api();
 String phoneNumber = null; // String | Phone Number
 try {
-    ServiceDocE911LocationsURIApiOutput result = apiInstance.v1E911PhoneNumberLocationGet(phoneNumber);
+    ServiceDocsE911LocationsURIApiOutput result = apiInstance.v1E911PhoneNumberLocationGet(phoneNumber);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911PhoneNumberLocationGet");
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911LocationsURIApiOutput**](ServiceDocE911LocationsURIApiOutput.md)
+[**ServiceDocsE911LocationsURIApiOutput**](ServiceDocsE911LocationsURIApiOutput.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ No authorization required
 
 ## v1E911Post
 
-> ServiceDocE911AddLocationOutput v1E911Post(reqBody)
+> ServiceDocsE911AddLocationOutput v1E911Post(reqBody)
 
 Create an E911 Location
 
@@ -350,7 +350,7 @@ Enter new location details.
 E911Api apiInstance = new E911Api();
 ServiceE911AddLocationInput reqBody = new ServiceE911AddLocationInput(); // ServiceE911AddLocationInput | location details
 try {
-    ServiceDocE911AddLocationOutput result = apiInstance.v1E911Post(reqBody);
+    ServiceDocsE911AddLocationOutput result = apiInstance.v1E911Post(reqBody);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling E911Api#v1E911Post");
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911AddLocationOutput**](ServiceDocE911AddLocationOutput.md)
+[**ServiceDocsE911AddLocationOutput**](ServiceDocsE911AddLocationOutput.md)
 
 ### Authorization
 

@@ -38,7 +38,7 @@ public class ServiceE911LocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getAddress1() {
     return address1;
   }
@@ -58,7 +58,7 @@ public class ServiceE911LocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getCommunity() {
     return community;
   }
@@ -78,7 +78,7 @@ public class ServiceE911LocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -88,7 +88,7 @@ public class ServiceE911LocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getState() {
     return state;
   }
@@ -98,7 +98,7 @@ public class ServiceE911LocationInput {
 
   /**
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public TypeEnum getType() {
     return type;
   }

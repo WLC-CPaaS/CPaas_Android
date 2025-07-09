@@ -24,7 +24,7 @@ public class ServiceE911ValidateLocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public ServiceE911LocationInput getLocation() {
     return location;
   }

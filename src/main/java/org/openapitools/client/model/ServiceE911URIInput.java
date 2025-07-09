@@ -25,7 +25,7 @@ public class ServiceE911URIInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getCallerName() {
     return callerName;
   }

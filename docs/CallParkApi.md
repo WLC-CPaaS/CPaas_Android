@@ -1,6 +1,6 @@
 # CallParkApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDParkedcallGet
 
-> ServiceDocsParkedcallGet v1AccountAccountIDParkedcallGet(accountID)
+> ServiceDocsCallparkGet v1AccountAccountIDParkedcallGet(accountID)
 
 Get Call Park List
 
@@ -25,7 +25,7 @@ Retrieve a list of calls parked on hold in a numbered slot.
 CallParkApi apiInstance = new CallParkApi();
 String accountID = null; // String | Account ID, 32 alpha numeric
 try {
-    ServiceDocsParkedcallGet result = apiInstance.v1AccountAccountIDParkedcallGet(accountID);
+    ServiceDocsCallparkGet result = apiInstance.v1AccountAccountIDParkedcallGet(accountID);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CallParkApi#v1AccountAccountIDParkedcallGet");
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsParkedcallGet**](ServiceDocsParkedcallGet.md)
+[**ServiceDocsCallparkGet**](ServiceDocsCallparkGet.md)
 
 ### Authorization
 

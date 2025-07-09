@@ -1,6 +1,6 @@
 # CallQueueRecipientApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDLoginrecipientRecipientIDPost
 
-> ServiceDocsCallQueueResponseShort v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody)
+> ServiceDocsCallQueueRecipientLoginLogoutOutput v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody)
 
 Login as Recipient
 
@@ -29,7 +29,7 @@ String accountID = null; // String | Account ID, 32 alpha numeric
 String recipientID = null; // String | Recipient ID, 32 alpha numeric
 ServiceVOIPCallQueueRecipientLoginLogoutData reqBody = new ServiceVOIPCallQueueRecipientLoginLogoutData(); // ServiceVOIPCallQueueRecipientLoginLogoutData | payload fields
 try {
-    ServiceDocsCallQueueResponseShort result = apiInstance.v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody);
+    ServiceDocsCallQueueRecipientLoginLogoutOutput result = apiInstance.v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CallQueueRecipientApi#v1AccountAccountIDLoginrecipientRecipientIDPost");
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsCallQueueResponseShort**](ServiceDocsCallQueueResponseShort.md)
+[**ServiceDocsCallQueueRecipientLoginLogoutOutput**](ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
 
 ### Authorization
 

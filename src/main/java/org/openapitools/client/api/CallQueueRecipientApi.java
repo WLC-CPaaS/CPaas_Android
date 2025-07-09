@@ -25,7 +25,7 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CPAASError;
 import org.openapitools.client.model.ServiceAPIResponse;
-import org.openapitools.client.model.ServiceDocsCallQueueResponseShort;
+import org.openapitools.client.model.ServiceDocsCallQueueRecipientLoginLogoutOutput;
 import org.openapitools.client.model.ServiceDocsGetQueueRecipients;
 import org.openapitools.client.model.ServiceVOIPCallQueueRecipientLoginLogoutData;
 import org.openapitools.client.model.ServiceVOIPCallQueueRecipientStatusData;
@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class CallQueueRecipientApi {
-  String basePath = "http://API_HOSTNAME";
+  String basePath = "http://api.beta.cpaaslabs.net";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -66,9 +66,9 @@ public class CallQueueRecipientApi {
    * @param accountID Account ID, 32 alpha numeric
    * @param recipientID Recipient ID, 32 alpha numeric
    * @param reqBody payload fields
-   * @return ServiceDocsCallQueueResponseShort
+   * @return ServiceDocsCallQueueRecipientLoginLogoutOutput
   */
-  public ServiceDocsCallQueueResponseShort v1AccountAccountIDLoginrecipientRecipientIDPost (String accountID, String recipientID, ServiceVOIPCallQueueRecipientLoginLogoutData reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsCallQueueRecipientLoginLogoutOutput v1AccountAccountIDLoginrecipientRecipientIDPost (String accountID, String recipientID, ServiceVOIPCallQueueRecipientLoginLogoutData reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = reqBody;
     // verify the required parameter 'accountID' is set
     if (accountID == null) {
@@ -114,7 +114,7 @@ public class CallQueueRecipientApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocsCallQueueResponseShort) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsCallQueueResponseShort.class);
+         return (ServiceDocsCallQueueRecipientLoginLogoutOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsCallQueueRecipientLoginLogoutOutput.class);
       } else {
          return null;
       }
@@ -140,7 +140,7 @@ public class CallQueueRecipientApi {
    * Agents must log in to receive calls. Depending on their membership, they can log in to one or more queues. (If an agent is a member of more than one queue, they will receive calls from all the queues they are a part of.)
    * @param accountID Account ID, 32 alpha numeric   * @param recipientID Recipient ID, 32 alpha numeric   * @param reqBody payload fields
   */
-  public void v1AccountAccountIDLoginrecipientRecipientIDPost (String accountID, String recipientID, ServiceVOIPCallQueueRecipientLoginLogoutData reqBody, final Response.Listener<ServiceDocsCallQueueResponseShort> responseListener, final Response.ErrorListener errorListener) {
+  public void v1AccountAccountIDLoginrecipientRecipientIDPost (String accountID, String recipientID, ServiceVOIPCallQueueRecipientLoginLogoutData reqBody, final Response.Listener<ServiceDocsCallQueueRecipientLoginLogoutOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = reqBody;
 
     // verify the required parameter 'accountID' is set
@@ -195,7 +195,7 @@ public class CallQueueRecipientApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocsCallQueueResponseShort) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsCallQueueResponseShort.class));
+              responseListener.onResponse((ServiceDocsCallQueueRecipientLoginLogoutOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsCallQueueRecipientLoginLogoutOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

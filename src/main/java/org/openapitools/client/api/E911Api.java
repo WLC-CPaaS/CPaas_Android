@@ -24,14 +24,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CPAASError;
-import org.openapitools.client.model.ServiceDocE911ActiveLocationOutput;
-import org.openapitools.client.model.ServiceDocE911ActiveLocationURIApiOutput;
-import org.openapitools.client.model.ServiceDocE911AddLocationOutput;
-import org.openapitools.client.model.ServiceDocE911LocationsURIApiOutput;
-import org.openapitools.client.model.ServiceDocE911RemoveLocationOutput;
-import org.openapitools.client.model.ServiceDocE911RemoveURIApiOutput;
-import org.openapitools.client.model.ServiceDocE911URIsApiOutput;
-import org.openapitools.client.model.ServiceDocE911ValidateLocationOutput;
+import org.openapitools.client.model.ServiceDocsE911ActiveLocationOutput;
+import org.openapitools.client.model.ServiceDocsE911ActiveLocationURIApiOutput;
+import org.openapitools.client.model.ServiceDocsE911AddLocationOutput;
+import org.openapitools.client.model.ServiceDocsE911LocationsURIApiOutput;
+import org.openapitools.client.model.ServiceDocsE911RemoveLocationOutput;
+import org.openapitools.client.model.ServiceDocsE911RemoveURIApiOutput;
+import org.openapitools.client.model.ServiceDocsE911URIsApiOutput;
+import org.openapitools.client.model.ServiceDocsE911ValidateLocationOutput;
 import org.openapitools.client.model.ServiceE911AddLocationInput;
 import org.openapitools.client.model.ServiceE911ValidateLocationInput;
 
@@ -46,7 +46,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class E911Api {
-  String basePath = "http://API_HOSTNAME";
+  String basePath = "http://api.beta.cpaaslabs.net";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -68,9 +68,9 @@ public class E911Api {
   /**
   * Get E911 List
   * Obtain e911 URIs associated with the provided account ID.
-   * @return ServiceDocE911URIsApiOutput
+   * @return ServiceDocsE911URIsApiOutput
   */
-  public ServiceDocE911URIsApiOutput v1E911Get () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911URIsApiOutput v1E911Get () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -100,7 +100,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911URIsApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911URIsApiOutput.class);
+         return (ServiceDocsE911URIsApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911URIsApiOutput.class);
       } else {
          return null;
       }
@@ -126,7 +126,7 @@ public class E911Api {
    * Obtain e911 URIs associated with the provided account ID.
 
   */
-  public void v1E911Get (final Response.Listener<ServiceDocE911URIsApiOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911Get (final Response.Listener<ServiceDocsE911URIsApiOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -166,7 +166,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911URIsApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911URIsApiOutput.class));
+              responseListener.onResponse((ServiceDocsE911URIsApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911URIsApiOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -185,9 +185,9 @@ public class E911Api {
   * Activate E911 Location
   * Edit the provision location.
    * @param locationID Location ID
-   * @return ServiceDocE911ActiveLocationOutput
+   * @return ServiceDocsE911ActiveLocationOutput
   */
-  public ServiceDocE911ActiveLocationOutput v1E911LocationLocationIDActivatePut (String locationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911ActiveLocationOutput v1E911LocationLocationIDActivatePut (String locationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'locationID' is set
     if (locationID == null) {
@@ -222,7 +222,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911ActiveLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911ActiveLocationOutput.class);
+         return (ServiceDocsE911ActiveLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911ActiveLocationOutput.class);
       } else {
          return null;
       }
@@ -248,7 +248,7 @@ public class E911Api {
    * Edit the provision location.
    * @param locationID Location ID
   */
-  public void v1E911LocationLocationIDActivatePut (String locationID, final Response.Listener<ServiceDocE911ActiveLocationOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911LocationLocationIDActivatePut (String locationID, final Response.Listener<ServiceDocsE911ActiveLocationOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'locationID' is set
@@ -293,7 +293,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911ActiveLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911ActiveLocationOutput.class));
+              responseListener.onResponse((ServiceDocsE911ActiveLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911ActiveLocationOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -312,9 +312,9 @@ public class E911Api {
   * Delete E911 Location
   * Remove the location.
    * @param locationID Location ID
-   * @return ServiceDocE911RemoveLocationOutput
+   * @return ServiceDocsE911RemoveLocationOutput
   */
-  public ServiceDocE911RemoveLocationOutput v1E911LocationLocationIDDelete (String locationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911RemoveLocationOutput v1E911LocationLocationIDDelete (String locationID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'locationID' is set
     if (locationID == null) {
@@ -349,7 +349,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911RemoveLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911RemoveLocationOutput.class);
+         return (ServiceDocsE911RemoveLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911RemoveLocationOutput.class);
       } else {
          return null;
       }
@@ -375,7 +375,7 @@ public class E911Api {
    * Remove the location.
    * @param locationID Location ID
   */
-  public void v1E911LocationLocationIDDelete (String locationID, final Response.Listener<ServiceDocE911RemoveLocationOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911LocationLocationIDDelete (String locationID, final Response.Listener<ServiceDocsE911RemoveLocationOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'locationID' is set
@@ -420,7 +420,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911RemoveLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911RemoveLocationOutput.class));
+              responseListener.onResponse((ServiceDocsE911RemoveLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911RemoveLocationOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -439,9 +439,9 @@ public class E911Api {
   * Validate a Location
   * Validate the location details.
    * @param reqBody location details
-   * @return ServiceDocE911ValidateLocationOutput
+   * @return ServiceDocsE911ValidateLocationOutput
   */
-  public ServiceDocE911ValidateLocationOutput v1E911LocationValidatePut (ServiceE911ValidateLocationInput reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911ValidateLocationOutput v1E911LocationValidatePut (ServiceE911ValidateLocationInput reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = reqBody;
     // verify the required parameter 'reqBody' is set
     if (reqBody == null) {
@@ -477,7 +477,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911ValidateLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911ValidateLocationOutput.class);
+         return (ServiceDocsE911ValidateLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911ValidateLocationOutput.class);
       } else {
          return null;
       }
@@ -503,7 +503,7 @@ public class E911Api {
    * Validate the location details.
    * @param reqBody location details
   */
-  public void v1E911LocationValidatePut (ServiceE911ValidateLocationInput reqBody, final Response.Listener<ServiceDocE911ValidateLocationOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911LocationValidatePut (ServiceE911ValidateLocationInput reqBody, final Response.Listener<ServiceDocsE911ValidateLocationOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = reqBody;
 
     // verify the required parameter 'reqBody' is set
@@ -548,7 +548,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911ValidateLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911ValidateLocationOutput.class));
+              responseListener.onResponse((ServiceDocsE911ValidateLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911ValidateLocationOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -567,9 +567,9 @@ public class E911Api {
   * Delete E911 Phone Number
   * Delete the e911 URI connected with the account URI.
    * @param phoneNumber Phone Number
-   * @return ServiceDocE911RemoveURIApiOutput
+   * @return ServiceDocsE911RemoveURIApiOutput
   */
-  public ServiceDocE911RemoveURIApiOutput v1E911PhoneNumberDelete (String phoneNumber) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911RemoveURIApiOutput v1E911PhoneNumberDelete (String phoneNumber) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'phoneNumber' is set
     if (phoneNumber == null) {
@@ -604,7 +604,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911RemoveURIApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911RemoveURIApiOutput.class);
+         return (ServiceDocsE911RemoveURIApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911RemoveURIApiOutput.class);
       } else {
          return null;
       }
@@ -630,7 +630,7 @@ public class E911Api {
    * Delete the e911 URI connected with the account URI.
    * @param phoneNumber Phone Number
   */
-  public void v1E911PhoneNumberDelete (String phoneNumber, final Response.Listener<ServiceDocE911RemoveURIApiOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911PhoneNumberDelete (String phoneNumber, final Response.Listener<ServiceDocsE911RemoveURIApiOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'phoneNumber' is set
@@ -675,7 +675,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911RemoveURIApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911RemoveURIApiOutput.class));
+              responseListener.onResponse((ServiceDocsE911RemoveURIApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911RemoveURIApiOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -694,9 +694,9 @@ public class E911Api {
   * Get Actvie Location for a Phone Number
   * Get the e911 location connected with the URI.
    * @param phoneNumber Phone Number
-   * @return ServiceDocE911ActiveLocationURIApiOutput
+   * @return ServiceDocsE911ActiveLocationURIApiOutput
   */
-  public ServiceDocE911ActiveLocationURIApiOutput v1E911PhoneNumberLocationActiveGet (String phoneNumber) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911ActiveLocationURIApiOutput v1E911PhoneNumberLocationActiveGet (String phoneNumber) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'phoneNumber' is set
     if (phoneNumber == null) {
@@ -731,7 +731,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911ActiveLocationURIApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911ActiveLocationURIApiOutput.class);
+         return (ServiceDocsE911ActiveLocationURIApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911ActiveLocationURIApiOutput.class);
       } else {
          return null;
       }
@@ -757,7 +757,7 @@ public class E911Api {
    * Get the e911 location connected with the URI.
    * @param phoneNumber Phone Number
   */
-  public void v1E911PhoneNumberLocationActiveGet (String phoneNumber, final Response.Listener<ServiceDocE911ActiveLocationURIApiOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911PhoneNumberLocationActiveGet (String phoneNumber, final Response.Listener<ServiceDocsE911ActiveLocationURIApiOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'phoneNumber' is set
@@ -802,7 +802,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911ActiveLocationURIApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911ActiveLocationURIApiOutput.class));
+              responseListener.onResponse((ServiceDocsE911ActiveLocationURIApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911ActiveLocationURIApiOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -821,9 +821,9 @@ public class E911Api {
   * Get Location List for Phone Number
   * Access a list of the e911 locations associated with the provided URI.
    * @param phoneNumber Phone Number
-   * @return ServiceDocE911LocationsURIApiOutput
+   * @return ServiceDocsE911LocationsURIApiOutput
   */
-  public ServiceDocE911LocationsURIApiOutput v1E911PhoneNumberLocationGet (String phoneNumber) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911LocationsURIApiOutput v1E911PhoneNumberLocationGet (String phoneNumber) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'phoneNumber' is set
     if (phoneNumber == null) {
@@ -858,7 +858,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911LocationsURIApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911LocationsURIApiOutput.class);
+         return (ServiceDocsE911LocationsURIApiOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911LocationsURIApiOutput.class);
       } else {
          return null;
       }
@@ -884,7 +884,7 @@ public class E911Api {
    * Access a list of the e911 locations associated with the provided URI.
    * @param phoneNumber Phone Number
   */
-  public void v1E911PhoneNumberLocationGet (String phoneNumber, final Response.Listener<ServiceDocE911LocationsURIApiOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911PhoneNumberLocationGet (String phoneNumber, final Response.Listener<ServiceDocsE911LocationsURIApiOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'phoneNumber' is set
@@ -929,7 +929,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911LocationsURIApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911LocationsURIApiOutput.class));
+              responseListener.onResponse((ServiceDocsE911LocationsURIApiOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911LocationsURIApiOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -948,9 +948,9 @@ public class E911Api {
   * Create an E911 Location
   * Enter new location details.
    * @param reqBody location details
-   * @return ServiceDocE911AddLocationOutput
+   * @return ServiceDocsE911AddLocationOutput
   */
-  public ServiceDocE911AddLocationOutput v1E911Post (ServiceE911AddLocationInput reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsE911AddLocationOutput v1E911Post (ServiceE911AddLocationInput reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = reqBody;
     // verify the required parameter 'reqBody' is set
     if (reqBody == null) {
@@ -986,7 +986,7 @@ public class E911Api {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocE911AddLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocE911AddLocationOutput.class);
+         return (ServiceDocsE911AddLocationOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsE911AddLocationOutput.class);
       } else {
          return null;
       }
@@ -1012,7 +1012,7 @@ public class E911Api {
    * Enter new location details.
    * @param reqBody location details
   */
-  public void v1E911Post (ServiceE911AddLocationInput reqBody, final Response.Listener<ServiceDocE911AddLocationOutput> responseListener, final Response.ErrorListener errorListener) {
+  public void v1E911Post (ServiceE911AddLocationInput reqBody, final Response.Listener<ServiceDocsE911AddLocationOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = reqBody;
 
     // verify the required parameter 'reqBody' is set
@@ -1057,7 +1057,7 @@ public class E911Api {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocE911AddLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocE911AddLocationOutput.class));
+              responseListener.onResponse((ServiceDocsE911AddLocationOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsE911AddLocationOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

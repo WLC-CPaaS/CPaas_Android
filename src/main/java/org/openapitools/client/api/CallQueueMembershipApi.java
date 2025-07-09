@@ -25,7 +25,7 @@ import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CPAASError;
 import org.openapitools.client.model.ServiceAPIResponse;
-import org.openapitools.client.model.ServiceDocsCallQueueMemberGetSingle;
+import org.openapitools.client.model.ServiceDocsQueueMembershipOutput;
 import org.openapitools.client.model.ServiceVOIPCallQueueEnableMembershipData;
 import org.openapitools.client.model.ServiceVOIPQueueMembershipAddData;
 
@@ -40,7 +40,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class CallQueueMembershipApi {
-  String basePath = "http://API_HOSTNAME";
+  String basePath = "http://api.beta.cpaaslabs.net";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -64,9 +64,9 @@ public class CallQueueMembershipApi {
   * Allow users to create queue memberships for recipients.
    * @param accountID Account ID, 32 alpha numeric
    * @param reqBody payload fields
-   * @return ServiceDocsCallQueueMemberGetSingle
+   * @return ServiceDocsQueueMembershipOutput
   */
-  public ServiceDocsCallQueueMemberGetSingle v1AccountAccountIDQueuemembershipPost (String accountID, ServiceVOIPQueueMembershipAddData reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsQueueMembershipOutput v1AccountAccountIDQueuemembershipPost (String accountID, ServiceVOIPQueueMembershipAddData reqBody) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = reqBody;
     // verify the required parameter 'accountID' is set
     if (accountID == null) {
@@ -107,7 +107,7 @@ public class CallQueueMembershipApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocsCallQueueMemberGetSingle) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsCallQueueMemberGetSingle.class);
+         return (ServiceDocsQueueMembershipOutput) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsQueueMembershipOutput.class);
       } else {
          return null;
       }
@@ -133,7 +133,7 @@ public class CallQueueMembershipApi {
    * Allow users to create queue memberships for recipients.
    * @param accountID Account ID, 32 alpha numeric   * @param reqBody payload fields
   */
-  public void v1AccountAccountIDQueuemembershipPost (String accountID, ServiceVOIPQueueMembershipAddData reqBody, final Response.Listener<ServiceDocsCallQueueMemberGetSingle> responseListener, final Response.ErrorListener errorListener) {
+  public void v1AccountAccountIDQueuemembershipPost (String accountID, ServiceVOIPQueueMembershipAddData reqBody, final Response.Listener<ServiceDocsQueueMembershipOutput> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = reqBody;
 
     // verify the required parameter 'accountID' is set
@@ -183,7 +183,7 @@ public class CallQueueMembershipApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocsCallQueueMemberGetSingle) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsCallQueueMemberGetSingle.class));
+              responseListener.onResponse((ServiceDocsQueueMembershipOutput) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsQueueMembershipOutput.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

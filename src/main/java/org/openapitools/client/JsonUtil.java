@@ -253,6 +253,10 @@ public class JsonUtil {
       return new TypeToken<List<ModelsVOIPAccountOutputFullCallerid>>(){}.getType();
     }
     
+    if ("ModelsVOIPDeviceOutputLineKey".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ModelsVOIPDeviceOutputLineKey>>(){}.getType();
+    }
+    
     if ("ModelsVOIPSharedDoNotDisturb".equalsIgnoreCase(className)) {
       return new TypeToken<List<ModelsVOIPSharedDoNotDisturb>>(){}.getType();
     }
@@ -421,38 +425,6 @@ public class JsonUtil {
       return new TypeToken<List<ServiceDeviceStatusOutput>>(){}.getType();
     }
     
-    if ("ServiceDocE911ActiveLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911ActiveLocationOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911ActiveLocationURIApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911ActiveLocationURIApiOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911AddLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911AddLocationOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911LocationsURIApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911LocationsURIApiOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911RemoveLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911RemoveLocationOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911RemoveURIApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911RemoveURIApiOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911URIsApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911URIsApiOutput>>(){}.getType();
-    }
-    
-    if ("ServiceDocE911ValidateLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocE911ValidateLocationOutput>>(){}.getType();
-    }
-    
     if ("ServiceDocGroupGetAll".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceDocGroupGetAll>>(){}.getType();
     }
@@ -525,12 +497,8 @@ public class JsonUtil {
       return new TypeToken<List<ServiceDocsCallQueueGetSingleStatus>>(){}.getType();
     }
     
-    if ("ServiceDocsCallQueueMemberGetSingle".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocsCallQueueMemberGetSingle>>(){}.getType();
-    }
-    
-    if ("ServiceDocsCallQueueResponseShort".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocsCallQueueResponseShort>>(){}.getType();
+    if ("ServiceDocsCallQueueRecipientLoginLogoutOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsCallQueueRecipientLoginLogoutOutput>>(){}.getType();
     }
     
     if ("ServiceDocsCallRecordingGetAll".equalsIgnoreCase(className)) {
@@ -547,6 +515,10 @@ public class JsonUtil {
     
     if ("ServiceDocsCallflowGetSingle".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceDocsCallflowGetSingle>>(){}.getType();
+    }
+    
+    if ("ServiceDocsCallparkGet".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsCallparkGet>>(){}.getType();
     }
     
     if ("ServiceDocsCampaignImportOutput".equalsIgnoreCase(className)) {
@@ -597,6 +569,38 @@ public class JsonUtil {
       return new TypeToken<List<ServiceDocsDeviceStatus>>(){}.getType();
     }
     
+    if ("ServiceDocsE911ActiveLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911ActiveLocationOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911ActiveLocationURIApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911ActiveLocationURIApiOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911AddLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911AddLocationOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911LocationsURIApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911LocationsURIApiOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911RemoveLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911RemoveLocationOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911RemoveURIApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911RemoveURIApiOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911URIsApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911URIsApiOutput>>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911ValidateLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsE911ValidateLocationOutput>>(){}.getType();
+    }
+    
     if ("ServiceDocsEndpointList".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceDocsEndpointList>>(){}.getType();
     }
@@ -645,10 +649,6 @@ public class JsonUtil {
       return new TypeToken<List<ServiceDocsOrderPhonenumber>>(){}.getType();
     }
     
-    if ("ServiceDocsParkedcallGet".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceDocsParkedcallGet>>(){}.getType();
-    }
-    
     if ("ServiceDocsPhonenumberAssignPayload".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceDocsPhonenumberAssignPayload>>(){}.getType();
     }
@@ -667,6 +667,10 @@ public class JsonUtil {
     
     if ("ServiceDocsPresenceGet".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceDocsPresenceGet>>(){}.getType();
+    }
+    
+    if ("ServiceDocsQueueMembershipOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceDocsQueueMembershipOutput>>(){}.getType();
     }
     
     if ("ServiceDocsStorageGet".equalsIgnoreCase(className)) {
@@ -853,16 +857,16 @@ public class JsonUtil {
       return new TypeToken<List<ServicePingOutput>>(){}.getType();
     }
     
-    if ("ServiceQueueRecipientOutputFull".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceQueueRecipientOutputFull>>(){}.getType();
+    if ("ServiceQueueRecipientOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceQueueRecipientOutput>>(){}.getType();
     }
     
-    if ("ServiceQueueRecipientOutputFullFeatures".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceQueueRecipientOutputFullFeatures>>(){}.getType();
+    if ("ServiceQueueRecipientOutputRecipient".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceQueueRecipientOutputRecipient>>(){}.getType();
     }
     
-    if ("ServiceQueueRecipientOutputFullRecipient".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceQueueRecipientOutputFullRecipient>>(){}.getType();
+    if ("ServiceQueueRecipientOutputRecipientFeatures".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceQueueRecipientOutputRecipientFeatures>>(){}.getType();
     }
     
     if ("ServiceRemoveURIApiOutput".equalsIgnoreCase(className)) {
@@ -1007,6 +1011,10 @@ public class JsonUtil {
     
     if ("ServiceVOIPDeviceAddEdit5".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceVOIPDeviceAddEdit5>>(){}.getType();
+    }
+    
+    if ("ServiceVOIPDeviceAddEditLineKey".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ServiceVOIPDeviceAddEditLineKey>>(){}.getType();
     }
     
     if ("ServiceVOIPDeviceAddEditProvision".equalsIgnoreCase(className)) {
@@ -1295,6 +1303,10 @@ public class JsonUtil {
       return new TypeToken<ModelsVOIPAccountOutputFullCallerid>(){}.getType();
     }
     
+    if ("ModelsVOIPDeviceOutputLineKey".equalsIgnoreCase(className)) {
+      return new TypeToken<ModelsVOIPDeviceOutputLineKey>(){}.getType();
+    }
+    
     if ("ModelsVOIPSharedDoNotDisturb".equalsIgnoreCase(className)) {
       return new TypeToken<ModelsVOIPSharedDoNotDisturb>(){}.getType();
     }
@@ -1463,38 +1475,6 @@ public class JsonUtil {
       return new TypeToken<ServiceDeviceStatusOutput>(){}.getType();
     }
     
-    if ("ServiceDocE911ActiveLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911ActiveLocationOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911ActiveLocationURIApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911ActiveLocationURIApiOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911AddLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911AddLocationOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911LocationsURIApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911LocationsURIApiOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911RemoveLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911RemoveLocationOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911RemoveURIApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911RemoveURIApiOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911URIsApiOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911URIsApiOutput>(){}.getType();
-    }
-    
-    if ("ServiceDocE911ValidateLocationOutput".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocE911ValidateLocationOutput>(){}.getType();
-    }
-    
     if ("ServiceDocGroupGetAll".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceDocGroupGetAll>(){}.getType();
     }
@@ -1567,12 +1547,8 @@ public class JsonUtil {
       return new TypeToken<ServiceDocsCallQueueGetSingleStatus>(){}.getType();
     }
     
-    if ("ServiceDocsCallQueueMemberGetSingle".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocsCallQueueMemberGetSingle>(){}.getType();
-    }
-    
-    if ("ServiceDocsCallQueueResponseShort".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocsCallQueueResponseShort>(){}.getType();
+    if ("ServiceDocsCallQueueRecipientLoginLogoutOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsCallQueueRecipientLoginLogoutOutput>(){}.getType();
     }
     
     if ("ServiceDocsCallRecordingGetAll".equalsIgnoreCase(className)) {
@@ -1589,6 +1565,10 @@ public class JsonUtil {
     
     if ("ServiceDocsCallflowGetSingle".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceDocsCallflowGetSingle>(){}.getType();
+    }
+    
+    if ("ServiceDocsCallparkGet".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsCallparkGet>(){}.getType();
     }
     
     if ("ServiceDocsCampaignImportOutput".equalsIgnoreCase(className)) {
@@ -1639,6 +1619,38 @@ public class JsonUtil {
       return new TypeToken<ServiceDocsDeviceStatus>(){}.getType();
     }
     
+    if ("ServiceDocsE911ActiveLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911ActiveLocationOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911ActiveLocationURIApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911ActiveLocationURIApiOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911AddLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911AddLocationOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911LocationsURIApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911LocationsURIApiOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911RemoveLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911RemoveLocationOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911RemoveURIApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911RemoveURIApiOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911URIsApiOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911URIsApiOutput>(){}.getType();
+    }
+    
+    if ("ServiceDocsE911ValidateLocationOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsE911ValidateLocationOutput>(){}.getType();
+    }
+    
     if ("ServiceDocsEndpointList".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceDocsEndpointList>(){}.getType();
     }
@@ -1687,10 +1699,6 @@ public class JsonUtil {
       return new TypeToken<ServiceDocsOrderPhonenumber>(){}.getType();
     }
     
-    if ("ServiceDocsParkedcallGet".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceDocsParkedcallGet>(){}.getType();
-    }
-    
     if ("ServiceDocsPhonenumberAssignPayload".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceDocsPhonenumberAssignPayload>(){}.getType();
     }
@@ -1709,6 +1717,10 @@ public class JsonUtil {
     
     if ("ServiceDocsPresenceGet".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceDocsPresenceGet>(){}.getType();
+    }
+    
+    if ("ServiceDocsQueueMembershipOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceDocsQueueMembershipOutput>(){}.getType();
     }
     
     if ("ServiceDocsStorageGet".equalsIgnoreCase(className)) {
@@ -1895,16 +1907,16 @@ public class JsonUtil {
       return new TypeToken<ServicePingOutput>(){}.getType();
     }
     
-    if ("ServiceQueueRecipientOutputFull".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceQueueRecipientOutputFull>(){}.getType();
+    if ("ServiceQueueRecipientOutput".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceQueueRecipientOutput>(){}.getType();
     }
     
-    if ("ServiceQueueRecipientOutputFullFeatures".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceQueueRecipientOutputFullFeatures>(){}.getType();
+    if ("ServiceQueueRecipientOutputRecipient".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceQueueRecipientOutputRecipient>(){}.getType();
     }
     
-    if ("ServiceQueueRecipientOutputFullRecipient".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceQueueRecipientOutputFullRecipient>(){}.getType();
+    if ("ServiceQueueRecipientOutputRecipientFeatures".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceQueueRecipientOutputRecipientFeatures>(){}.getType();
     }
     
     if ("ServiceRemoveURIApiOutput".equalsIgnoreCase(className)) {
@@ -2049,6 +2061,10 @@ public class JsonUtil {
     
     if ("ServiceVOIPDeviceAddEdit5".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceVOIPDeviceAddEdit5>(){}.getType();
+    }
+    
+    if ("ServiceVOIPDeviceAddEditLineKey".equalsIgnoreCase(className)) {
+      return new TypeToken<ServiceVOIPDeviceAddEditLineKey>(){}.getType();
     }
     
     if ("ServiceVOIPDeviceAddEditProvision".equalsIgnoreCase(className)) {

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **endpointFamily** | **String** |  |  [optional]
 **endpointModel** | **String** |  |  [optional]
 **id** | **String** |  |  [optional]
+**lineKeys** | [**List&lt;ModelsVOIPDeviceOutputLineKey&gt;**](ModelsVOIPDeviceOutputLineKey.md) |  |  [optional]
 
 
 

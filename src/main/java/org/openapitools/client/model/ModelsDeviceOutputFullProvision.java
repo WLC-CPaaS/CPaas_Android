@@ -12,6 +12,8 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
+import org.openapitools.client.model.ModelsVOIPDeviceOutputLineKey;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,6 +28,8 @@ public class ModelsDeviceOutputFullProvision {
   private String endpointModel = null;
   @SerializedName("id")
   private String id = null;
+  @SerializedName("line_keys")
+  private List<ModelsVOIPDeviceOutputLineKey> lineKeys = null;
 
   /**
    **/
@@ -67,6 +71,16 @@ public class ModelsDeviceOutputFullProvision {
     this.id = id;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<ModelsVOIPDeviceOutputLineKey> getLineKeys() {
+    return lineKeys;
+  }
+  public void setLineKeys(List<ModelsVOIPDeviceOutputLineKey> lineKeys) {
+    this.lineKeys = lineKeys;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -80,7 +94,8 @@ public class ModelsDeviceOutputFullProvision {
     return (this.endpointBrand == null ? modelsDeviceOutputFullProvision.endpointBrand == null : this.endpointBrand.equals(modelsDeviceOutputFullProvision.endpointBrand)) &&
         (this.endpointFamily == null ? modelsDeviceOutputFullProvision.endpointFamily == null : this.endpointFamily.equals(modelsDeviceOutputFullProvision.endpointFamily)) &&
         (this.endpointModel == null ? modelsDeviceOutputFullProvision.endpointModel == null : this.endpointModel.equals(modelsDeviceOutputFullProvision.endpointModel)) &&
-        (this.id == null ? modelsDeviceOutputFullProvision.id == null : this.id.equals(modelsDeviceOutputFullProvision.id));
+        (this.id == null ? modelsDeviceOutputFullProvision.id == null : this.id.equals(modelsDeviceOutputFullProvision.id)) &&
+        (this.lineKeys == null ? modelsDeviceOutputFullProvision.lineKeys == null : this.lineKeys.equals(modelsDeviceOutputFullProvision.lineKeys));
   }
 
   @Override
@@ -90,6 +105,7 @@ public class ModelsDeviceOutputFullProvision {
     result = 31 * result + (this.endpointFamily == null ? 0: this.endpointFamily.hashCode());
     result = 31 * result + (this.endpointModel == null ? 0: this.endpointModel.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
+    result = 31 * result + (this.lineKeys == null ? 0: this.lineKeys.hashCode());
     return result;
   }
 
@@ -102,6 +118,7 @@ public class ModelsDeviceOutputFullProvision {
     sb.append("  endpointFamily: ").append(endpointFamily).append("\n");
     sb.append("  endpointModel: ").append(endpointModel).append("\n");
     sb.append("  id: ").append(id).append("\n");
+    sb.append("  lineKeys: ").append(lineKeys).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

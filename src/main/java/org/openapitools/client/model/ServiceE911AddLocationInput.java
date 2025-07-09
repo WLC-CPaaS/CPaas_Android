@@ -27,7 +27,7 @@ public class ServiceE911AddLocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public ServiceE911LocationInput getLocation() {
     return location;
   }
@@ -37,7 +37,7 @@ public class ServiceE911AddLocationInput {
 
   /**
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public ServiceE911URIInput getUri() {
     return uri;
   }

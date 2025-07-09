@@ -12,6 +12,8 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
+import org.openapitools.client.model.ServiceVOIPDeviceAddEditLineKey;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,6 +28,8 @@ public class ServiceVOIPDeviceAddEditProvision {
   private String endpointModel = null;
   @SerializedName("id")
   private String id = null;
+  @SerializedName("line_keys")
+  private List<ServiceVOIPDeviceAddEditLineKey> lineKeys = null;
 
   /**
    **/
@@ -67,6 +71,16 @@ public class ServiceVOIPDeviceAddEditProvision {
     this.id = id;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<ServiceVOIPDeviceAddEditLineKey> getLineKeys() {
+    return lineKeys;
+  }
+  public void setLineKeys(List<ServiceVOIPDeviceAddEditLineKey> lineKeys) {
+    this.lineKeys = lineKeys;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -80,7 +94,8 @@ public class ServiceVOIPDeviceAddEditProvision {
     return (this.endpointBrand == null ? serviceVOIPDeviceAddEditProvision.endpointBrand == null : this.endpointBrand.equals(serviceVOIPDeviceAddEditProvision.endpointBrand)) &&
         (this.endpointFamily == null ? serviceVOIPDeviceAddEditProvision.endpointFamily == null : this.endpointFamily.equals(serviceVOIPDeviceAddEditProvision.endpointFamily)) &&
         (this.endpointModel == null ? serviceVOIPDeviceAddEditProvision.endpointModel == null : this.endpointModel.equals(serviceVOIPDeviceAddEditProvision.endpointModel)) &&
-        (this.id == null ? serviceVOIPDeviceAddEditProvision.id == null : this.id.equals(serviceVOIPDeviceAddEditProvision.id));
+        (this.id == null ? serviceVOIPDeviceAddEditProvision.id == null : this.id.equals(serviceVOIPDeviceAddEditProvision.id)) &&
+        (this.lineKeys == null ? serviceVOIPDeviceAddEditProvision.lineKeys == null : this.lineKeys.equals(serviceVOIPDeviceAddEditProvision.lineKeys));
   }
 
   @Override
@@ -90,6 +105,7 @@ public class ServiceVOIPDeviceAddEditProvision {
     result = 31 * result + (this.endpointFamily == null ? 0: this.endpointFamily.hashCode());
     result = 31 * result + (this.endpointModel == null ? 0: this.endpointModel.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
+    result = 31 * result + (this.lineKeys == null ? 0: this.lineKeys.hashCode());
     return result;
   }
 
@@ -102,6 +118,7 @@ public class ServiceVOIPDeviceAddEditProvision {
     sb.append("  endpointFamily: ").append(endpointFamily).append("\n");
     sb.append("  endpointModel: ").append(endpointModel).append("\n");
     sb.append("  id: ").append(id).append("\n");
+    sb.append("  lineKeys: ").append(lineKeys).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

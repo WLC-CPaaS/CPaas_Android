@@ -24,7 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import org.openapitools.client.model.CPAASError;
-import org.openapitools.client.model.ServiceDocsParkedcallGet;
+import org.openapitools.client.model.ServiceDocsCallparkGet;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -37,7 +37,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class CallParkApi {
-  String basePath = "http://API_HOSTNAME";
+  String basePath = "http://api.beta.cpaaslabs.net";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -60,9 +60,9 @@ public class CallParkApi {
   * Get Call Park List
   * Retrieve a list of calls parked on hold in a numbered slot.
    * @param accountID Account ID, 32 alpha numeric
-   * @return ServiceDocsParkedcallGet
+   * @return ServiceDocsCallparkGet
   */
-  public ServiceDocsParkedcallGet v1AccountAccountIDParkedcallGet (String accountID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ServiceDocsCallparkGet v1AccountAccountIDParkedcallGet (String accountID) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'accountID' is set
     if (accountID == null) {
@@ -97,7 +97,7 @@ public class CallParkApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (ServiceDocsParkedcallGet) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsParkedcallGet.class);
+         return (ServiceDocsCallparkGet) ApiInvoker.deserialize(localVarResponse, "", ServiceDocsCallparkGet.class);
       } else {
          return null;
       }
@@ -123,7 +123,7 @@ public class CallParkApi {
    * Retrieve a list of calls parked on hold in a numbered slot.
    * @param accountID Account ID, 32 alpha numeric
   */
-  public void v1AccountAccountIDParkedcallGet (String accountID, final Response.Listener<ServiceDocsParkedcallGet> responseListener, final Response.ErrorListener errorListener) {
+  public void v1AccountAccountIDParkedcallGet (String accountID, final Response.Listener<ServiceDocsCallparkGet> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'accountID' is set
@@ -168,7 +168,7 @@ public class CallParkApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((ServiceDocsParkedcallGet) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsParkedcallGet.class));
+              responseListener.onResponse((ServiceDocsCallparkGet) ApiInvoker.deserialize(localVarResponse,  "", ServiceDocsCallparkGet.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

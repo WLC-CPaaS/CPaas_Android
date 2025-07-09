@@ -6,13 +6,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address1** | **String** |  | 
+**address1** | **String** |  |  [optional]
 **address2** | **String** |  |  [optional]
-**community** | **String** |  | 
+**community** | **String** |  |  [optional]
 **plusFour** | **String** |  |  [optional]
-**postalCode** | **String** |  | 
-**state** | **String** |  | 
-**type** | [**TypeEnum**](#TypeEnum) |  |  [optional]
+**postalCode** | **String** |  |  [optional]
+**state** | **String** |  |  [optional]
+**type** | [**TypeEnum**](#TypeEnum) |  | 
 
 
 ## Enum: TypeEnum

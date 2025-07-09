@@ -1,6 +1,6 @@
 # CallQueueMembershipApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDQueuemembershipPost
 
-> ServiceDocsCallQueueMemberGetSingle v1AccountAccountIDQueuemembershipPost(accountID, reqBody)
+> ServiceDocsQueueMembershipOutput v1AccountAccountIDQueuemembershipPost(accountID, reqBody)
 
 Grant Queue Membership to User
 
@@ -28,7 +28,7 @@ CallQueueMembershipApi apiInstance = new CallQueueMembershipApi();
 String accountID = null; // String | Account ID, 32 alpha numeric
 ServiceVOIPQueueMembershipAddData reqBody = new ServiceVOIPQueueMembershipAddData(); // ServiceVOIPQueueMembershipAddData | payload fields
 try {
-    ServiceDocsCallQueueMemberGetSingle result = apiInstance.v1AccountAccountIDQueuemembershipPost(accountID, reqBody);
+    ServiceDocsQueueMembershipOutput result = apiInstance.v1AccountAccountIDQueuemembershipPost(accountID, reqBody);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CallQueueMembershipApi#v1AccountAccountIDQueuemembershipPost");
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsCallQueueMemberGetSingle**](ServiceDocsCallQueueMemberGetSingle.md)
+[**ServiceDocsQueueMembershipOutput**](ServiceDocsQueueMembershipOutput.md)
 
 ### Authorization
 

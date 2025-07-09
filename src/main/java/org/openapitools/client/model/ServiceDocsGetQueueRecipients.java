@@ -12,7 +12,7 @@
 
 package org.openapitools.client.model;
 
-import org.openapitools.client.model.ServiceQueueRecipientOutputFull;
+import org.openapitools.client.model.ServiceQueueRecipientOutput;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 public class ServiceDocsGetQueueRecipients {
   
   @SerializedName("data")
-  private ServiceQueueRecipientOutputFull data = null;
+  private ServiceQueueRecipientOutput data = null;
   @SerializedName("next_start_key")
   private String nextStartKey = null;
   @SerializedName("page_size")
@@ -35,10 +35,10 @@ public class ServiceDocsGetQueueRecipients {
   /**
    **/
   @ApiModelProperty(value = "")
-  public ServiceQueueRecipientOutputFull getData() {
+  public ServiceQueueRecipientOutput getData() {
     return data;
   }
-  public void setData(ServiceQueueRecipientOutputFull data) {
+  public void setData(ServiceQueueRecipientOutput data) {
     this.data = data;
   }
 

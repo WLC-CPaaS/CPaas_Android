@@ -23,6 +23,8 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CPAASError;
+import java.io.File;
 import org.openapitools.client.model.ModelsGenerateConfigFileRequest;
 import org.openapitools.client.model.ProvisioningDocsDocsBrandOutputSingle;
 import org.openapitools.client.model.ProvisioningDocsDocsBrandsOutput;
@@ -46,7 +48,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class ProvisioningApi {
-  String basePath = "http://API_HOSTNAME";
+  String basePath = "http://api.beta.cpaaslabs.net";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -66,7 +68,145 @@ public class ProvisioningApi {
   }
 
   /**
-  * Get Family
+  * Get Config File Details
+  * Retrieve the configuration details (e.g., settings and parameters) for a device.
+   * @param accountID Account ID, 32 alpha numeric
+   * @param filename Name of config file
+   * @return File
+  */
+  public File v1AccountAccountIDProvisionFilenameGet (String accountID, String filename) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'accountID' is set
+    if (accountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'accountID' when calling v1AccountAccountIDProvisionFilenameGet",
+        new ApiException(400, "Missing the required parameter 'accountID' when calling v1AccountAccountIDProvisionFilenameGet"));
+    }
+    // verify the required parameter 'filename' is set
+    if (filename == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'filename' when calling v1AccountAccountIDProvisionFilenameGet",
+        new ApiException(400, "Missing the required parameter 'filename' when calling v1AccountAccountIDProvisionFilenameGet"));
+    }
+
+    // create path and map variables
+    String path = "/v1/account/{accountID}/provision/{filename}".replaceAll("\\{" + "accountID" + "\\}", apiInvoker.escapeString(accountID.toString())).replaceAll("\\{" + "filename" + "\\}", apiInvoker.escapeString(filename.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (File) ApiInvoker.deserialize(localVarResponse, "", File.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Get Config File Details
+   * Retrieve the configuration details (e.g., settings and parameters) for a device.
+   * @param accountID Account ID, 32 alpha numeric   * @param filename Name of config file
+  */
+  public void v1AccountAccountIDProvisionFilenameGet (String accountID, String filename, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'accountID' is set
+    if (accountID == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'accountID' when calling v1AccountAccountIDProvisionFilenameGet",
+        new ApiException(400, "Missing the required parameter 'accountID' when calling v1AccountAccountIDProvisionFilenameGet"));
+    }
+    // verify the required parameter 'filename' is set
+    if (filename == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'filename' when calling v1AccountAccountIDProvisionFilenameGet",
+        new ApiException(400, "Missing the required parameter 'filename' when calling v1AccountAccountIDProvisionFilenameGet"));
+    }
+
+    // create path and map variables
+    String path = "/v1/account/{accountID}/provision/{filename}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "accountID" + "\\}", apiInvoker.escapeString(accountID.toString())).replaceAll("\\{" + "filename" + "\\}", apiInvoker.escapeString(filename.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((File) ApiInvoker.deserialize(localVarResponse,  "", File.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Get Family Details
   * Retrieve a family&#39;s details by the randomly generated ID.
    * @param brand brand
    * @param family family
@@ -134,7 +274,7 @@ public class ProvisioningApi {
   }
 
       /**
-   * Get Family
+   * Get Family Details
    * Retrieve a family&#39;s details by the randomly generated ID.
    * @param brand brand   * @param family family
   */
@@ -354,7 +494,7 @@ public class ProvisioningApi {
     }
   }
   /**
-  * Get Model
+  * Get Model Details
   * Retrieve a model&#39;s details by the randomly generated ID.
    * @param brand brand
    * @param family family
@@ -428,7 +568,7 @@ public class ProvisioningApi {
   }
 
       /**
-   * Get Model
+   * Get Model Details
    * Retrieve a model&#39;s details by the randomly generated ID.
    * @param brand brand   * @param family family   * @param model model
   */
@@ -667,7 +807,7 @@ public class ProvisioningApi {
     }
   }
   /**
-  * Get Template
+  * Get Template Details
   * Retrieve details about a template for a model by the randomly generated ID.
    * @param brand brand
    * @param family family
@@ -747,7 +887,7 @@ public class ProvisioningApi {
   }
 
       /**
-   * Get Template
+   * Get Template Details
    * Retrieve details about a template for a model by the randomly generated ID.
    * @param brand brand   * @param family family   * @param model model   * @param template template
   */
@@ -966,7 +1106,7 @@ public class ProvisioningApi {
     }
   }
   /**
-  * Get Brand
+  * Get Brand Details
   * Retrieve a brand&#39;s details by the randomly generated ID.
    * @param brand brand id to retrieve a brand
    * @return ProvisioningDocsDocsBrandOutputSingle
@@ -1028,7 +1168,7 @@ public class ProvisioningApi {
   }
 
       /**
-   * Get Brand
+   * Get Brand Details
    * Retrieve a brand&#39;s details by the randomly generated ID.
    * @param brand brand id to retrieve a brand
   */
@@ -1093,7 +1233,7 @@ public class ProvisioningApi {
     }
   }
   /**
-  * Get Brand
+  * Get Brand List
   * Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
    * @param brandName 
    * @param pageSize 
@@ -1157,7 +1297,7 @@ public class ProvisioningApi {
   }
 
       /**
-   * Get Brand
+   * Get Brand List
    * Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
    * @param brandName    * @param pageSize    * @param startKey    * @param status 
   */
@@ -1221,7 +1361,7 @@ public class ProvisioningApi {
     }
   }
   /**
-  * Generate config file
+  * Generate Config File
   * Generate a configuration file that includes a list of parameters passed to the specified template_id in the request payload, with populated values returned in the response.
    * @param params body params to generate config file
    * @return ProvisioningDocsDocsConfigFileOutput
@@ -1284,7 +1424,7 @@ public class ProvisioningApi {
   }
 
       /**
-   * Generate config file
+   * Generate Config File
    * Generate a configuration file that includes a list of parameters passed to the specified template_id in the request payload, with populated values returned in the response.
    * @param params body params to generate config file
   */
