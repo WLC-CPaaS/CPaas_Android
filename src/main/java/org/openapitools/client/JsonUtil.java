@@ -213,6 +213,10 @@ public class JsonUtil {
       return new TypeToken<List<ModelsGenerateConfigFileRequest>>(){}.getType();
     }
     
+    if ("ModelsLineKeyProcessedTempData".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ModelsLineKeyProcessedTempData>>(){}.getType();
+    }
+    
     if ("ModelsModel".equalsIgnoreCase(className)) {
       return new TypeToken<List<ModelsModel>>(){}.getType();
     }
@@ -1261,6 +1265,10 @@ public class JsonUtil {
     
     if ("ModelsGenerateConfigFileRequest".equalsIgnoreCase(className)) {
       return new TypeToken<ModelsGenerateConfigFileRequest>(){}.getType();
+    }
+    
+    if ("ModelsLineKeyProcessedTempData".equalsIgnoreCase(className)) {
+      return new TypeToken<ModelsLineKeyProcessedTempData>(){}.getType();
     }
     
     if ("ModelsModel".equalsIgnoreCase(className)) {

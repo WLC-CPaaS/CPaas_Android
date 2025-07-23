@@ -12,6 +12,8 @@
 
 package org.openapitools.client.model;
 
+import java.util.*;
+import org.openapitools.client.model.ModelsLineKeyProcessedTempData;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -26,6 +28,8 @@ public class ModelsConfigFileParameter {
   private String httpsPassword = null;
   @SerializedName("https_username")
   private String httpsUsername = null;
+  @SerializedName("line_keys")
+  private List<ModelsLineKeyProcessedTempData> lineKeys = null;
   @SerializedName("mac_address")
   private String macAddress = null;
   @SerializedName("realm")
@@ -77,6 +81,16 @@ public class ModelsConfigFileParameter {
   }
   public void setHttpsUsername(String httpsUsername) {
     this.httpsUsername = httpsUsername;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<ModelsLineKeyProcessedTempData> getLineKeys() {
+    return lineKeys;
+  }
+  public void setLineKeys(List<ModelsLineKeyProcessedTempData> lineKeys) {
+    this.lineKeys = lineKeys;
   }
 
   /**
@@ -153,6 +167,7 @@ public class ModelsConfigFileParameter {
         (this.httpsHost == null ? modelsConfigFileParameter.httpsHost == null : this.httpsHost.equals(modelsConfigFileParameter.httpsHost)) &&
         (this.httpsPassword == null ? modelsConfigFileParameter.httpsPassword == null : this.httpsPassword.equals(modelsConfigFileParameter.httpsPassword)) &&
         (this.httpsUsername == null ? modelsConfigFileParameter.httpsUsername == null : this.httpsUsername.equals(modelsConfigFileParameter.httpsUsername)) &&
+        (this.lineKeys == null ? modelsConfigFileParameter.lineKeys == null : this.lineKeys.equals(modelsConfigFileParameter.lineKeys)) &&
         (this.macAddress == null ? modelsConfigFileParameter.macAddress == null : this.macAddress.equals(modelsConfigFileParameter.macAddress)) &&
         (this.realm == null ? modelsConfigFileParameter.realm == null : this.realm.equals(modelsConfigFileParameter.realm)) &&
         (this.sipPassword == null ? modelsConfigFileParameter.sipPassword == null : this.sipPassword.equals(modelsConfigFileParameter.sipPassword)) &&
@@ -168,6 +183,7 @@ public class ModelsConfigFileParameter {
     result = 31 * result + (this.httpsHost == null ? 0: this.httpsHost.hashCode());
     result = 31 * result + (this.httpsPassword == null ? 0: this.httpsPassword.hashCode());
     result = 31 * result + (this.httpsUsername == null ? 0: this.httpsUsername.hashCode());
+    result = 31 * result + (this.lineKeys == null ? 0: this.lineKeys.hashCode());
     result = 31 * result + (this.macAddress == null ? 0: this.macAddress.hashCode());
     result = 31 * result + (this.realm == null ? 0: this.realm.hashCode());
     result = 31 * result + (this.sipPassword == null ? 0: this.sipPassword.hashCode());
@@ -186,6 +202,7 @@ public class ModelsConfigFileParameter {
     sb.append("  httpsHost: ").append(httpsHost).append("\n");
     sb.append("  httpsPassword: ").append(httpsPassword).append("\n");
     sb.append("  httpsUsername: ").append(httpsUsername).append("\n");
+    sb.append("  lineKeys: ").append(lineKeys).append("\n");
     sb.append("  macAddress: ").append(macAddress).append("\n");
     sb.append("  realm: ").append(realm).append("\n");
     sb.append("  sipPassword: ").append(sipPassword).append("\n");
