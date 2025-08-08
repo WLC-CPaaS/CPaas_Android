@@ -821,10 +821,6 @@ public class JsonUtil {
       return new TypeToken<List<ServiceImpersonateUserOutputFull>>(){}.getType();
     }
     
-    if ("ServiceImpersonatedUserInfo".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceImpersonatedUserInfo>>(){}.getType();
-    }
-    
     if ("ServiceMediaOutputFull".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceMediaOutputFull>>(){}.getType();
     }
@@ -919,10 +915,6 @@ public class JsonUtil {
     
     if ("ServiceSystemStatusSupportService".equalsIgnoreCase(className)) {
       return new TypeToken<List<ServiceSystemStatusSupportService>>(){}.getType();
-    }
-    
-    if ("ServiceSystemStatusVOIPService".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ServiceSystemStatusVOIPService>>(){}.getType();
     }
     
     if ("ServiceTTS".equalsIgnoreCase(className)) {
@@ -1875,10 +1867,6 @@ public class JsonUtil {
       return new TypeToken<ServiceImpersonateUserOutputFull>(){}.getType();
     }
     
-    if ("ServiceImpersonatedUserInfo".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceImpersonatedUserInfo>(){}.getType();
-    }
-    
     if ("ServiceMediaOutputFull".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceMediaOutputFull>(){}.getType();
     }
@@ -1973,10 +1961,6 @@ public class JsonUtil {
     
     if ("ServiceSystemStatusSupportService".equalsIgnoreCase(className)) {
       return new TypeToken<ServiceSystemStatusSupportService>(){}.getType();
-    }
-    
-    if ("ServiceSystemStatusVOIPService".equalsIgnoreCase(className)) {
-      return new TypeToken<ServiceSystemStatusVOIPService>(){}.getType();
     }
     
     if ("ServiceTTS".equalsIgnoreCase(className)) {

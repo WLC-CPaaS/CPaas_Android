@@ -20,8 +20,6 @@ public class ModelsLineKeyProcessedTempData {
   
   @SerializedName("label")
   private String label = null;
-  @SerializedName("line")
-  private Integer line = null;
   @SerializedName("type")
   private String type = null;
   @SerializedName("value")
@@ -35,16 +33,6 @@ public class ModelsLineKeyProcessedTempData {
   }
   public void setLabel(String label) {
     this.label = label;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getLine() {
-    return line;
-  }
-  public void setLine(Integer line) {
-    this.line = line;
   }
 
   /**
@@ -78,7 +66,6 @@ public class ModelsLineKeyProcessedTempData {
     }
     ModelsLineKeyProcessedTempData modelsLineKeyProcessedTempData = (ModelsLineKeyProcessedTempData) o;
     return (this.label == null ? modelsLineKeyProcessedTempData.label == null : this.label.equals(modelsLineKeyProcessedTempData.label)) &&
-        (this.line == null ? modelsLineKeyProcessedTempData.line == null : this.line.equals(modelsLineKeyProcessedTempData.line)) &&
         (this.type == null ? modelsLineKeyProcessedTempData.type == null : this.type.equals(modelsLineKeyProcessedTempData.type)) &&
         (this.value == null ? modelsLineKeyProcessedTempData.value == null : this.value.equals(modelsLineKeyProcessedTempData.value));
   }
@@ -87,7 +74,6 @@ public class ModelsLineKeyProcessedTempData {
   public int hashCode() {
     int result = 17;
     result = 31 * result + (this.label == null ? 0: this.label.hashCode());
-    result = 31 * result + (this.line == null ? 0: this.line.hashCode());
     result = 31 * result + (this.type == null ? 0: this.type.hashCode());
     result = 31 * result + (this.value == null ? 0: this.value.hashCode());
     return result;
@@ -99,7 +85,6 @@ public class ModelsLineKeyProcessedTempData {
     sb.append("class ModelsLineKeyProcessedTempData {\n");
     
     sb.append("  label: ").append(label).append("\n");
-    sb.append("  line: ").append(line).append("\n");
     sb.append("  type: ").append(type).append("\n");
     sb.append("  value: ").append(value).append("\n");
     sb.append("}\n");

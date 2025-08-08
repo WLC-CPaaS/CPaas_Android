@@ -15,7 +15,6 @@ package org.openapitools.client.model;
 import org.openapitools.client.model.ServiceSystemStatusCPAASService;
 import org.openapitools.client.model.ServiceSystemStatusMessagingService;
 import org.openapitools.client.model.ServiceSystemStatusSupportService;
-import org.openapitools.client.model.ServiceSystemStatusVOIPService;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -28,8 +27,6 @@ public class ServiceSystemStatusOutput {
   private ServiceSystemStatusMessagingService messagingServices = null;
   @SerializedName("support_services")
   private ServiceSystemStatusSupportService supportServices = null;
-  @SerializedName("voip_services")
-  private ServiceSystemStatusVOIPService voipServices = null;
 
   /**
    **/
@@ -61,16 +58,6 @@ public class ServiceSystemStatusOutput {
     this.supportServices = supportServices;
   }
 
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public ServiceSystemStatusVOIPService getVoipServices() {
-    return voipServices;
-  }
-  public void setVoipServices(ServiceSystemStatusVOIPService voipServices) {
-    this.voipServices = voipServices;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -83,8 +70,7 @@ public class ServiceSystemStatusOutput {
     ServiceSystemStatusOutput serviceSystemStatusOutput = (ServiceSystemStatusOutput) o;
     return (this.cpaasServices == null ? serviceSystemStatusOutput.cpaasServices == null : this.cpaasServices.equals(serviceSystemStatusOutput.cpaasServices)) &&
         (this.messagingServices == null ? serviceSystemStatusOutput.messagingServices == null : this.messagingServices.equals(serviceSystemStatusOutput.messagingServices)) &&
-        (this.supportServices == null ? serviceSystemStatusOutput.supportServices == null : this.supportServices.equals(serviceSystemStatusOutput.supportServices)) &&
-        (this.voipServices == null ? serviceSystemStatusOutput.voipServices == null : this.voipServices.equals(serviceSystemStatusOutput.voipServices));
+        (this.supportServices == null ? serviceSystemStatusOutput.supportServices == null : this.supportServices.equals(serviceSystemStatusOutput.supportServices));
   }
 
   @Override
@@ -93,7 +79,6 @@ public class ServiceSystemStatusOutput {
     result = 31 * result + (this.cpaasServices == null ? 0: this.cpaasServices.hashCode());
     result = 31 * result + (this.messagingServices == null ? 0: this.messagingServices.hashCode());
     result = 31 * result + (this.supportServices == null ? 0: this.supportServices.hashCode());
-    result = 31 * result + (this.voipServices == null ? 0: this.voipServices.hashCode());
     return result;
   }
 
@@ -105,7 +90,6 @@ public class ServiceSystemStatusOutput {
     sb.append("  cpaasServices: ").append(cpaasServices).append("\n");
     sb.append("  messagingServices: ").append(messagingServices).append("\n");
     sb.append("  supportServices: ").append(supportServices).append("\n");
-    sb.append("  voipServices: ").append(voipServices).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
